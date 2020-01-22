@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CMS.SiteMaster" %>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Site.css" rel="stylesheet" type="text/css" />
+    <!--Lato Font Import -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1 {
+            text-align: left;
+        }
+    </style>
+    <style type="text/css">
+        .txtbox {
+            height: 32px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <form runat="server" id="MyForm">
+        <div id="outer">
+            <div id="header">
+                <div style="float: left;">
+                    <h1><a href="#">Common Management System</a></h1>
+                </div>
+                <div style="float: right; vertical-align: middle;">
+                    <br />
+                    <br />
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <tr style="vertical-align: middle;">
+                            <td align="center" style="width: 65px; color:white"><span class="glyphicon glyphicon-user"></span>
+                                Welcome, <%: User_Name  %>!
+                            </td>
+                            <td align="center" style="width: 65px">
+                                <a href="/LogInPage.aspx" runat="server" style="color:white"><span class="glyphicon glyphicon-log-out"></span>
+                                    Sign Out</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="subheader" class="style1">
+                <a href="~/Default.aspx" runat="server" title="">Home</a>
+                <a href="~/AboutUs.aspx" runat="server" title="">About Us</a>
+                <a href="~/ContactUs.aspx" runat="server" title="">Contact Us</a>
+            </div>
+            <div id="content">
+                <div id="rightColumn" style="float: right; vertical-align: middle;">
+                    <br />
+                    <br />
+                    <ul id="utilitiesContainer" runat="server" style="font-family: sans-serif;">
+                        <li>
+                            <a href="http://localhost:55983/Default.aspx?id=<%: User_Id  %>" class="btn btn-primary">Calendar
+                            </a>
+                        </li>
+                        <br />
+                        <li>
+                            <a href="/ShareProject.aspx?id=<%: User_Id  %>" class="btn btn-primary">Share Project
+                            </a>
+                        </li>
+                        <br />
+                        <li>
+                            <a href="/FullList.aspx?id=<%: User_Id  %>" class="btn btn-primary">Full List
+                            </a>
+                        </li>
+                        <br />
+                        <li>
+                            <a href="/NewProject.aspx" class="btn btn-success">New Project
+                            </a>
+                        </li>
+                        <br />
+                        <li>
+                            <a href="/NewList.aspx?id=<%: User_Id  %>" class="btn btn-success">New List
+                            </a>
+                        </li>
+                        <br />
+                        <li>
+                            <a href="/NewTask.aspx?id=<%: User_Id  %>" class="btn btn-success">New Task</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="mainContent">
+                    <div id="centerColumn">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <div id="leftColumn">
+                    <h3>My Projects</h3>
+                    <asp:ListView ID="ListView_ProjectsMenu" runat="server"
+                        ItemType="CMS.Models.View_Projects"
+                        SelectMethod="GetProjects">
+
+                        <ItemSeparatorTemplate></ItemSeparatorTemplate>
+                        <ItemTemplate>
+                            <li>
+                                <a href="/TaskList.aspx?projectid=<%#: Item.ProjectId %>&userid=<%#: User_Id %>"><%#: Item.ProjectName %></a>
+                            </li>
+                        </ItemTemplate>
+
+                        <LayoutTemplate>
+                            <ul id="itemPlaceholderContainer" runat="server" style="font-family: Verdana, Arial, Helvetica, sans-serif;">
+                                <li runat="server" id="itemPlaceholder" />
+                            </ul>
+                            <div style="text-align: left; background-color: #FFCC66; font-family: Verdana, Arial, Helvetica, sans-serif; color: #333333;"></div>
+                        </LayoutTemplate>
+                    </asp:ListView>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="footer">
+                <p>Copyright &copy; 2017 CMS Development Team</p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

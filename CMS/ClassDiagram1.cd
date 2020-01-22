@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CMS.Models.Priority">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAEAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Models\Priority.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.Models.Project">
+    <Position X="5.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAACAAAAAAABABAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.Models.Task">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAEBAAAAIAEAAgAACAAAAAAAACAAAA=</HashCode>
+      <FileName>Models\Task.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.Models.TaskList">
+    <Position X="5.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACIAABAAAAAAgAAAIAAAAAAA=</HashCode>
+      <FileName>Models\TaskList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.Models.User">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACgAAAAAAQAAAAgAAABAAAACAgAAAAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.Models.UserProject">
+    <Position X="3" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAACAgABAIAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Models\UserProject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.Models.View_all">
+    <Position X="8.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAADAAAAJgABAgAAAAgAAAAAACAAAA=</HashCode>
+      <FileName>Models\View_all.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.Models.View_Projects">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAgABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\View_Projects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.Models._event">
+    <Position X="5.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAQAAAAAIABAAAAAAAAAQAAAAIEAAQAAAAA=</HashCode>
+      <FileName>Models\event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.Models.View_SharedProjects">
+    <Position X="8.25" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAACQAAAAgABgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\View_SharedProjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.Models.View_SharedProjects_Users">
+    <Position X="7.75" Y="7.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAACAAAAAgARgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\View_SharedProjects_Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
